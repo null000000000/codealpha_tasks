@@ -1,67 +1,63 @@
-# CodeAlpha Cyber Security Internship: Tasks Submission (October Batch)
+# CodeAlpha Cyber Security Internship — October Batch
 
-**Intern:** YOUR NAME HERE
+**Intern:** Ahmed Mahdy
 
-| # | Task | Status |
-|---|------|--------|
-| 1 | Basic Network Sniffer | Completed |
-| 2 | Phishing Awareness Training | Completed |
+## Tasks Submission
+
+| Task | Status |
+|---|---|
+| Task 1: Basic Network Sniffer | Completed |
+| Task 2: Phishing Awareness Training | Completed |
 
 ---
 
 ## Task 1: Basic Network Sniffer
 
-**GitHub (Task 1 README):** `(https://github.com/null000000000/Task1_Basic_Network_Sniffer)`
+**GitHub Repository:** https://github.com/null000000000/Task1_Basic_Network_Sniffer
 
-### What I built
-A Python program that uses `scapy` to capture live network packets and break them down so the structure of network traffic is easy to understand. For every packet it displays:
-- time, source and destination IP, protocol (TCP, UDP, ICMP) and size
-- source and destination ports, and TCP flags
-- DNS queries and ICMP type/code
-- a payload preview in text and hex
+### What I Built
+A Python network sniffer using Scapy to capture live network packets and make network traffic easier to understand.
 
-It also supports filters (for example `tcp port 80`), a packet count, saving to a `.pcap` file for Wireshark, and a protocol summary at the end.
+Features include:
+- Displays timestamps, source and destination IP addresses, protocols, and packet sizes.
+- Extracts source and destination ports and TCP flags.
+- Identifies DNS queries and ICMP type/code.
+- Displays payload previews in text and hexadecimal.
+- Supports BPF filters, packet count, interface selection, and PCAP export.
+- Prints a protocol summary after capture.
 
-### How I tested it
-I tested it on **Kali Linux inside VirtualBox**, on a lab network I own:
-1. Ran `nmap -sn` on the lab subnet to find live hosts.
-2. Ran the sniffer with `sudo ./snifer.py` and captured live traffic. It printed a UDP packet with its IPs, ports and payload (text and hex).
+### How I Tested It
+Tested on Kali Linux inside VirtualBox using a lab network I own.
 
-![Live capture](Task1_Basic_Network_Sniffer/screenshots/05_sniffer_live_capture.png)
-![Nmap lab scan](Task1_Basic_Network_Sniffer/screenshots/04_nmap_lab_host_discovery.png)
+- Used `nmap -sn` to discover active hosts on the lab subnet.
+- Captured live traffic using the Python sniffer.
+- Inspected packet addresses, ports, and payload data.
 
-### What I learned
-How data moves through the network layers (Ethernet, IP, TCP/UDP, data), the differences between TCP, UDP and ICMP, and why encrypted traffic shows unreadable payloads.
-
-Files: [`Task1_Basic_Network_Sniffer`](Task1_Basic_Network_Sniffer)
+### What I Learned
+Network encapsulation, TCP/UDP/ICMP fundamentals, packet inspection, and the differences between readable plaintext traffic and encrypted HTTPS traffic.
 
 ---
 
 ## Task 2: Phishing Awareness Training
 
-**GitHub (Task 2 repository):** `https://github.com/null000000000/Task2_Phishing_Awareness`
+**GitHub Repository:** https://github.com/null000000000/Task2_Phishing_Awareness
 
-**Live demo (Vercel):** https://snofsdidfvodnvsdnvov.vercel.app/
+**Live Demo:** https://snofsdidfvodnvsdnvov.vercel.app/
 
-### What I built
-An interactive web training module about phishing attacks. It covers:
-- **6 attack types:** email phishing, spear phishing, smishing, vishing, whaling/BEC and clone sites
-- **Live email inspection:** a realistic mail client with 6 clickable red flags
-- **Fake website recognition:** the right-to-left domain reading rule plus a live domain parser that splits any URL into subdomain and real root domain
-- **Social engineering:** 6 psychological triggers used by attackers
-- **Real cases:** Google/Facebook, Twitter, RSA and Target
-- **Best practices** and what to do after clicking a malicious link
-- **An 8-question quiz** with a result at the end
+### What I Built
+An interactive web-based training module designed to teach users how to recognize and avoid phishing attacks.
 
-![Landing page](Task2_Phishing_Awareness/screenshots/01_landing_page.png)
-![Attack vectors](Task2_Phishing_Awareness/screenshots/02_attack_vectors_module.png)
-![Domain parser](Task2_Phishing_Awareness/screenshots/03_fake_website_domain_parser.png)
-
-Files and full explanation: [`Task2_Phishing_Awareness`](Task2_Phishing_Awareness)
+Features include:
+- **Six attack types:** Email phishing, spear phishing, smishing, vishing, whaling/BEC, and clone sites.
+- **Email inspection:** A realistic email interface with six clickable red flags.
+- **Fake website recognition:** Domain-reading guidance and an interactive URL parser.
+- **Social engineering:** Six psychological triggers commonly exploited by attackers.
+- **Real-world cases:** Google/Facebook, Twitter, RSA, and Target.
+- **Security best practices:** Guidance on prevention and responding to malicious links.
+- **Interactive quiz:** Eight questions with a final result.
 
 ---
 
-## Legal note
-The sniffer was used only on a lab network that I own. Use it only where you have permission.
+## Legal Notice
 
-#CodeAlpha
+The network sniffer was tested only on a lab network I own. Network monitoring should only be performed on systems and networks where you have permission.
